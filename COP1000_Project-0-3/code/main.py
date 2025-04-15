@@ -19,8 +19,9 @@ def menu():
 menu()
 choice = int(input("Select Choice:"))
 
-db = open("cars.txt", "r")
+db = open("data/cars.txt", "r")
 options = db.read()
+print(options)
 
 if choice == 1:
      print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
