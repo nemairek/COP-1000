@@ -1,7 +1,9 @@
 AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
 vehicleOption2 = ""
-vehicleOption2 = ""
 
+with open("COP1000_Project-0-3\data\car.txt", "r") as db:
+     options = db.read()
+     db.close()
 
 def menu():
     print("********************************")
@@ -19,19 +21,15 @@ def menu():
 menu()
 choice = int(input("Select Choice:"))
 
-db = open("data/cars.txt", "r")
-options = db.read()
-print(options)
-
 if choice == 1:
+     vehicleOption2 = ""
      print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
-     print(options)
-     #[print(vehicle) for vehicle in AllowedVehiclesList]
-
+     [print(vehicle) for vehicle in AllowedVehiclesList]
+     
 elif choice == 2: 
      vehicleOption2 = str(input("Please Enter the full Vehicle name:"))
 if vehicleOption2 == "":
-     print("")
+     print()
 elif vehicleOption2 in AllowedVehiclesList:
      print(vehicleOption2, end=" ")
      print("is an authorized vehicle")
@@ -39,14 +37,13 @@ elif vehicleOption2 not in AllowedVehiclesList:
      print(vehicleOption2, end=" ")
      print("is not an authorized vehicle, if you received this in error please check the spelling and try again")
 
-if choice == 3:       
+if choice == 3:      
      vehicleOption3 = str(input("Please Enter the full Vehicle name you would like to add:"))
-     for i in range(AllowedVehiclesList):
-      newCar = vehicleOption3
-      AllowedVehiclesList.append(newCar)
-     print("You have added ")
+     for vehicle in AllowedVehiclesList:
+      AllowedVehiclesList.append(vehicleOption3)
+     print("You have added")
      print(vehicleOption3)
-     print(" as an authorized vehicle") 
+     print("as an authorized vehicle")
 elif choice == 4: 
         
      print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
