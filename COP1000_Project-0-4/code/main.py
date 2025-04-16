@@ -3,12 +3,12 @@ AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck',
 vehicleOption2 = ""
 vehicleOption3 = ""
 
-f = open('C:COP1000_Project-0-3\\data\\car.txt')
+f = open('C:COP1000_Project-0-4\\data\\car.txt')
 cars = f.read()
 print(cars)
 f.close()
 
-db = open('C:COP1000_Project-0-3\\data\\car.txt', 'a')
+db = open('C:COP1000_Project-0-4\\data\\car.txt', 'a')
 
 
 def menu():
