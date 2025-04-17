@@ -8,6 +8,11 @@ cars = f.read()
 print(cars)
 f.close()
 
+
+
+
+
+
 db = open('C:COP1000_Project-0-3\\data\\car.txt', 'a')
 
 
