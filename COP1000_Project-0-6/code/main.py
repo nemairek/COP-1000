@@ -27,8 +27,7 @@ def deleteByName(obj):
      cars(AllowedVehiclesList)
 
 cars = read()
-#filtered_cars = deleteByName(obj = {"olist": cars, 'make': 'Chevy'})
-#create(filtered_cars)
+
 
 def menu():
     print("********************************")
@@ -63,6 +62,7 @@ if choice == 3:
          print()
      elif vehicleOption3 != "": 
           update(vehicleOption3)  
+          print("You have added '", vehicleOption3,"' as an authorized vehicle" ) 
 if choice == 4:
  vehicleOption4 = input("Please Enter the full Vehicle name you would like to REMOVE:" )
  confirmation = input("Are you sure you want to remove ", vehicleOption4, " from the Authorized Vehicles List?:")
@@ -75,4 +75,4 @@ elif choice == 5:
       print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
       quit()
    
-print("You have added '", vehicleOption3,"' as an authorized vehicle" ) 
+
